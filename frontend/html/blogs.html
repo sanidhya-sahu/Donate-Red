@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
     <link rel="stylesheet" href="..\Css\blogs.css">
+    <script src="../js/logCheck.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -14,13 +15,23 @@
           </div>
           <div class="navbar">
             <ul class="navbar_list">
-              <li><a href="/Home"></a>Home</li>
-              <li><a href="/Find Donar"></a>Find Donar</li>
-              <li><a href="/About Us"></a>About Us</li>
-              <li><a href="/Blogs"></a>Blogs</li>
-              <li><a href="Contacct Us"></a>Conatact</li>
+              <li>
+                <a style=" color: white; text-decoration: none;" href='/home'>Home</a>
+              </li>
+              <li>
+                <a style=" color: white; text-decoration: none;" href='/find'>Find Donar</a>
+              </li>
+              <li>
+                <a style=" color: white; text-decoration: none; "href='/about'>About Us</a>
+              </li>
+              <li>
+                <a style=" color: white; text-decoration: none;" href='/blog'>Blogs</a>
+              </li>
+              <li>
+                <a style=" color: white; text-decoration: none; "href='/about'>Conatact</a>
+              </li>
             </ul>
-            <button  onclick="window.location.href=`/login`" style="color: white;" class="button">Login / Register</button>
+            <button id="headLoginButton"  onclick="window.location.href=`/login`" style="color: white;" class="button">Login / Register</button>
           </div>
         </div>
       </header>
