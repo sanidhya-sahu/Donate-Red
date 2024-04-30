@@ -33,9 +33,7 @@ function isLoggedIn(req, res, next) {
 router.get(`/donate`, isLoggedIn, (req, res) => {
     res.sendFile(frontPath + `HTML/donate.html`)
 })
-router.get(`/find`, isLoggedIn, (req, res) => {
-    res.send("find")
-})
+
 
 router.get(`/logpage`,(req,res)=>{
     res.sendFile(frontPath + `HTML/login.html`)

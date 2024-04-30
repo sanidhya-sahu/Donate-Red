@@ -38,7 +38,7 @@ router.post(`/register`, (req, res) => {
     userSchema.find({ accID: fastHashCode.fastHashCode(req.body.email) })
         .then((found) => {
             if (Object.keys(found).length === 0) {
-                const username = req.body.firstname + req.body.lastname 
+                const username = req.body.firstname +" "+ req.body.lastname 
                 const newUser = new userSchema({
                     name: username,
                     email: req.body.email,
@@ -70,13 +70,14 @@ router.post(`/register`, (req, res) => {
         })
 })
 
-router.get(`/findDonorDetails`,isLoggedIn,(req,res)=>{
+router.get(`/findDonorDetails`,(req,res)=>{
     userSchema.findOne({ accID: req.query.accID})
         .then((found) => {
             if (found != null) {
                 const obj = {
                     "name":found.name,
                     "email":found.email,
+                    "phone":found.phone,
                     "city":found.city,
                     "state":found.state
                 }
