@@ -38,17 +38,17 @@ router.post(`/register`, (req, res) => {
     userSchema.find({ accID: fastHashCode.fastHashCode(req.body.email) })
         .then((found) => {
             if (Object.keys(found).length === 0) {
+                const username = req.body.firstname + req.body.lastname 
                 const newUser = new userSchema({
-                    name: req.body.name,
+                    name: username,
                     email: req.body.email,
                     bloodGrp: req.body.bloodGrp,
                     age: req.body.age,
-                    address: req.body.address,
                     phone: req.body.phone,
                     city: req.body.city,
                     state: req.body.state,
                     accID: fastHashCode.fastHashCode(req.body.email),
-                    pass: fastHashCode.fastHashCode(req.body.pass)
+                    pass: fastHashCode.fastHashCode(req.body.password)
                 })
                 newUser.save()
                     .then((saved) => {
