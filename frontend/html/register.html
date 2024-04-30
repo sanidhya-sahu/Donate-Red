@@ -20,7 +20,7 @@
               <li><a href="/Blogs"></a>Blogs</li>
               <li><a href="Contacct Us"></a>Conatact</li>
             </ul>
-            <button style="color: white;" class="button">Login / Register</button>
+            <button onclick="window.location.href=`/login`" style="color: white;" class="button">Login / Register</button>
           </div>
         </div>
       </header>
@@ -43,7 +43,24 @@
             <label>
                 <input name="email"  placeholder="" type="email" class="input" required>
                 <span>Email</span>
-            </label> 
+            </label>
+           
+              <label>
+                <input  placeholder="" type="number" name="age" id="age" min="18" max="70" class="input"  required />
+                <span>Age</span>
+              </label>
+              <label>
+                <input
+                  required=""
+                  placeholder="  "
+                  type="tel"
+                  class="input"
+                  id="phone"
+                  name="phone"
+                  required
+                />
+                <span>Phone</span>
+              </label> 
             <label>
               <input placeholder="" type="text" id="city" name="city" class="input" required />
               <span>City</span>
@@ -57,7 +74,19 @@
                 <input name="password" required placeholder="" type="password" class="input">
                 <span>Password</span>
             </label>
-            <button class="submit">Submit</button>
+            <label for="blood-type" name = "blood-type">
+              <select name="blood-type" id="blood-type" placeholder="Blood-Type" required>
+                <option value="Select Your Blood Type">Select Your Blood Type</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+            <button id="sub" class="submit">Submit</button>
             <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
         </form>
       </div>

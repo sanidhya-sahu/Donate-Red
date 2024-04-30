@@ -87,14 +87,15 @@ body {
 }
 
 button {
+  
   cursor: pointer;
   font-weight: 700;
   font-family: Helvetica, "sans-serif";
   transition: all 0.2s;
-  padding: 10px 20px;
+  padding: 10px 17px;
   border-radius: 100px;
   /* background: #cfef00; */
-  background: red;
+  background: hsl(225, 68%, 53%);
   border: 1px solid transparent;
   display: flex;
   align-items: center;
@@ -103,7 +104,7 @@ button {
 
 button:hover {
   /* background: #c4e201; */
-  background: red;
+  background: hsl(225, 68%, 53%);
 }
 
 button > svg {
@@ -226,6 +227,7 @@ button:active {
   }
   
   .submit {
+    margin-top: 3.5%;
     border: none;
     outline: none;
     background-color: royalblue;
@@ -253,8 +255,28 @@ button:active {
   }
 
   .register{
-    height: 90vh;
+    height: 120vh;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .select{
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+
+  #blood-type{
+    padding: 10px 10px 20px 10px;
+      outline: 0;
+      border: 1px solid rgba(105, 105, 105, 0.397);
+      border-radius: 10px;
+      width: 105%;
+  }
+
+  #sub{
+    width: 106.5%;
   }

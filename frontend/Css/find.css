@@ -91,10 +91,10 @@ button {
   font-weight: 700;
   font-family: Helvetica, "sans-serif";
   transition: all 0.2s;
-  padding: 10px 20px;
+  padding: 10px 17px;
   border-radius: 100px;
   /* background: #cfef00; */
-  background: red;
+  background:hsl(225, 68%, 53%);
   border: 1px solid transparent;
   display: flex;
   align-items: center;
@@ -103,7 +103,7 @@ button {
 
 button:hover {
   /* background: #c4e201; */
-  background: red;
+  background: hsl(225, 68%, 53%);
 }
 
 button > svg {
@@ -161,10 +161,12 @@ button:active {
 }
 
 .form {
+  width: 65%;
+  height: 63%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 350px;
+  /* max-width: 350px; */
   background-color: hsl(218, 70%, 18%);
   padding: 20px;
   border-radius: 20px;
@@ -317,5 +319,5 @@ button:active {
     outline: 0;
     border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 10px;
-    width: 105%;
+    width: 106.5%;
 }

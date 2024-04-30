@@ -1,10 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+    --ff-poppins: "Poppins", sans-serif;
+  }
+
+
+*{
+    font-family: var(--ff-poppins);
+    margin: 0;
+    padding: 0;
+}
+
+
 .one{
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 .er{
-    color:black;
+    margin-bottom: 2%;
+    font-size:4rem ;
+    color:hsl(218, 70%, 18%);;
     text-decoration: solid;
+}
+
+.er2{
+    margin-bottom:2% ;
+    color: hsl(0, 0%, 47%);
+}
+
+.imgg{
+    height: 55%;
+    width: 32%;
 }
