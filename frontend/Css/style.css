@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-poppins);
+}
+
+:root {
+  --royal-blue-light: hsl(225, 68%, 53%);
+  --oxford-blue-1: hsl(218, 70%, 18%);
+  --ff-poppins: "Poppins", sans-serif;
+  --fs-6: 2.2rem;
+  --fs-2: 8rem;
+  --fw-700: 700;
+  --sonic-silver: hsl(0, 0%, 47%);
+  --gradient: linear-gradient(
+    90deg,
+    var(--carolina-blue) 0%,
+    var(--royal-blue-light) 100%
+  );
+  --deg: -90deg;
+  --carolina-blue: hsl(201, 92%, 47%);
+  --white: hsl(0, 0%, 100%);
+  --shadow-4: 0px 10px 30px var(--flickr-blue_30);
+  --radius-4: 4px;
+  --fs-7: 1.6rem;
+  --flickr-blue_30: hsla(225, 68%, 53%, 0.3);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100vw;
+  height: 10vh;
+  background-color: hsl(218, 71%, 11%);
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+
+.div_header {
+  height: 8vh;
+  margin: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  height: 80px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+  width: 46vw;
+  justify-content: space-between;
+}
+
+.navbar_list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 35vw;
+}
+
+.navbar_list li {
+  color: white;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica, "sans-serif";
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  /* background: #cfef00; */
+  background: red;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+button:hover {
+  /* background: #c4e201; */
+  background: red;
+}
+
+button > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover svg {
+  transform: translateX(5px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90vh;
+  width: 100vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 55vw;
+  height: 85vh;
+}
+
+.figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  width: 35vw;
+}
+
+.img_banner {
+  width: 73%;
+  height: 95.5%;
+}
+
+.img-div {
+  width: 9.6%;
+  height: 14.2%;
+}
+
+.welcome {
+  color: var(--royal-blue-light);
+  font-family: var(--ff-poppins);
+  /* font-size: var(--fs-6); */
+  font-size: 1.5rem;
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  /* margin-block-end: 10px;
+   */
+}
+
+.connect {
+  margin-block: 15px 30px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  color: var(--oxford-blue-1);
+  /* font-size: var(--fs-2); */
+  font-size: 5rem;
+  line-height: 1.2;
+}
+
+.text {
+  /* font-size: var(--fs-6); */
+  font-size: 1.5rem;
+  line-height: 1.45;
+  margin-block-end: 40px;
+  color: var(--sonic-silver);
+}
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.figure2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  width: 35vw;
+  
+}
+
+.content2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 45vw;
+  height: 85vh;
+  
+}
+
+.about-us-txt {
+  color: var(--royal-blue-light);
+  font-family: var(--ff-poppins);
+  /* font-size: var(--fs-6); */
+  font-size: 1.5rem;
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  /* margin-block-end: 10px;
+   */
+}
+
+.heading2 {
+  font-weight: bold;
+  color: var(--oxford-blue-1);
+  /* font-size: var(--fs-2); */
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 2%;
+}
+
+.section-text-1 {
+  font-size: 1.5rem;
+  line-height: 1.45;
+  margin-block-end: 40px;
+  color: var(--sonic-silver);
+ 
+}
+
+.section-text {
+  font-size: 1.2rem;
+  line-height: 1.45;
+  margin-block-end: 40px;
+  color: var(--sonic-silver);
+  
+}
+

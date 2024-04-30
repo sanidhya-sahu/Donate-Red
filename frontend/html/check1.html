@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Details</title>
+    <link rel="stylesheet" href="..\Css\find.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="div_header">
+        <div class="logo">
+          <img src="..\Assets\logo.png" alt="Donate Red" class="img" />
+        </div>
+        <div class="navbar">
+          <ul class="navbar_list">
+            <li><a href="/Home"></a>Home</li>
+            <li><a href="/Find Donar"></a>Find Donar</li>
+            <li><a href="/About Us"></a>About Us</li>
+            <li><a href="/Blogs"></a>Blogs</li>
+            <li><a href="Contacct Us"></a>Conatact</li>
+          </ul>
+          <button style="color: white" class="button">Login / Register</button>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <div class="content">
+        <div class="img-div">
+          <img src="..\Assets\blood-icon.png" alt="" height="70px" width="70px" />
+        </div>
+        <div class="heading">
+          <h1 class="connect">Enter Personal Details and check your eligibility
+          </h1>
+        </div>
+        <!-- <div class="para">
+          <p class="text">
+            "Every drop counts. Search for a donor who can make a life-saving
+            difference today."
+          </p>
+        </div> -->
+        <div class="img22">
+          <img src="..\Assets\donate.jpg" alt="" />
+        </div>
+      </div>
+      <div class="form-box">
+        <form class="form" method="post" action="">
+          <p class="title">Enter Your Details</p>
+          <!-- <div class="flex">
+            <label>
+              <input required="" placeholder="" type="text" class="input" />
+              <span>Firstname</span>
+            </label>
+
+            <label>
+              <input required="" placeholder="" type="text" class="input" />
+              <span>Lastname</span>
+            </label>
+          </div> -->
+
+          <label>
+            <input
+              required=""
+              placeholder="  "
+              type="tel"
+              class="input"
+              id="phone"
+              name="phone"
+              required
+            />
+            <span>Phone</span>
+          </label>
+          <label>
+            <input  placeholder="" type="number" name="age" id="age" min="18" max="70" class="input"  required />
+            <span>Age</span>
+          </label>
+          <label for="blood-type" name = "blood-type">
+            <select name="blood-type" id="blood-type" placeholder="Blood-Type" required>
+              <option value="Select Your Blood Type">Select Your Blood Type</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+            <!-- <span>Blood type</span> -->
+          </label>
+          <label>
+            <input required="" placeholder="" type="text" id="address" name="" class="input" required />
+            <span>Address</span>
+          </label>
+          <!-- <label>
+            <input required="" placeholder="" type="text" id="state" name="state" class="input" required />
+            <span>  State</span>
+          </label> -->
+          <button class="submit">Next→</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

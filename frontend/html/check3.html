@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Details 3</title>
+    <link rel="stylesheet" href="..\Css\check3.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="div_header">
+        <div class="logo">
+          <img src="..\Assets\logo.png" alt="Donate Red" class="img" />
+        </div>
+        <div class="navbar">
+          <ul class="navbar_list">
+            <li><a href="/Home"></a>Home</li>
+            <li><a href="/Find Donar"></a>Find Donar</li>
+            <li><a href="/About Us"></a>About Us</li>
+            <li><a href="/Blogs"></a>Blogs</li>
+            <li><a href="Contacct Us"></a>Conatact</li>
+          </ul>
+          <button style="color: white" class="button">Login / Register</button>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <div class="content">
+        <div class="img-div">
+          <img src="..\Assets\blood-icon.png" alt="" height="70px" width="70px" />
+        </div>
+        <div class="heading">
+          <h1 class="connect">Enter Personal Details and check your eligibility
+          </h1>
+        </div>
+        <!-- <div class="para">
+          <p class="text">
+            "Every drop counts. Search for a donor who can make a life-saving
+            difference today."
+          </p>
+        </div> -->
+        <div class="img22">
+          <img src="..\Assets\donate.jpg" alt="" />
+        </div>
+      </div>
+      <div class="form-box">
+        <form class="form" method="post" action="">
+          <p class="title">Enter Your Details</p>
+          <label for="Rabies" name = "Rabies">
+            <select name="Rabies" id="Rabies" placeholder="Rabies"  class="sel" required>
+              <option value="Have you been treated for Rabies or received Hepatitis B immune globulin in the past year?">Have you been treated for Rabies or received Hepatitis B immune globulin in the past year?
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </label>
+          <p style="color: white;"> Have you ever been diagnosed with or currently suffer from any of the following conditions?</p>
+          <div>
+            <input type="checkbox" id="Diabetes" name="Diabetes" />
+            <label for="Diabetes">Diabetes</label>
+          </div>
+          <div>
+            <input type="checkbox" id="Cancer" name="Cancer" />
+            <label for="Cancer">Cancer</label>
+          </div>
+          <div>
+            <input type="checkbox" id="Tuberculosis" name="Tuberculosis" />
+            <label for="Tuberculosis">Tuberculosis</label>
+          </div>
+          <div>
+            <input type="checkbox" id="Bronchial asthma" name="Bronchial asthma" />
+            <label for="Bronchial asthma">Bronchial asthma</label>
+          </div>
+          <div>
+            <input type="checkbox" id="Diabetes" name="Liver disease" />
+            <label for="Liver disease">Liver disease</label>
+          </div>
+          <div>
+            <input type="checkbox" id="kidney disease" name="kidney disease" />
+            <label for="kidney disease">kidney disease</label>
+          </div>
+          <div>
+            <input type="checkbox" id="Blood clotting problem or blood disease" name="Blood clotting problem or blood disease" />
+            <label for="Blood clotting problem or blood disease">Blood clotting problem or blood disease</label>
+          </div>
+          <div>
+            <input type="checkbox" id="Heart disease or high blood pressure" name="Heart disease or high blood pressure" />
+            <label for="Heart disease or high blood pressure">Heart disease or high blood pressure</label>
+          </div>
+          <div>
+            <input type="checkbox" id="Allergic disorder" name="Allergic disorder" />
+            <label for="Allergic disorder">Allergic disorder</label>
+          </div>
+          <div>
+            <input type="checkbox" name="none" id="none"> 
+            <label for="none">none</label>
+          </div>
+          
+          <button class="submit">Next→</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

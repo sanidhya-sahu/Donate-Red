@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Details 2</title>
+    <link rel="stylesheet" href="..\Css\check2.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="div_header">
+        <div class="logo">
+          <img src="..\Assets\logo.png" alt="Donate Red" class="img" />
+        </div>
+        <div class="navbar">
+          <ul class="navbar_list">
+            <li><a href="/Home"></a>Home</li>
+            <li><a href="/Find Donar"></a>Find Donar</li>
+            <li><a href="/About Us"></a>About Us</li>
+            <li><a href="/Blogs"></a>Blogs</li>
+            <li><a href="Contacct Us"></a>Conatact</li>
+          </ul>
+          <button style="color: white" class="button">Login / Register</button>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <div class="content">
+        <div class="img-div">
+          <img src="..\Assets\blood-icon.png" alt="" height="70px" width="70px" />
+        </div>
+        <div class="heading">
+          <h1 class="connect">Enter Personal Details and check your eligibility
+          </h1>
+        </div>
+        <!-- <div class="para">
+          <p class="text">
+            "Every drop counts. Search for a donor who can make a life-saving
+            difference today."
+          </p>
+        </div> -->
+        <div class="img22">
+          <img src="..\Assets\donate.jpg" alt="" />
+        </div>
+      </div>
+      <div class="form-box">
+        <form class="form" method="post" action="">
+          <p class="title">Enter Your Details</p>
+          <label for="firstdonar" name = "firstdonar">
+            <select name="donartype" id="donartype" placeholder="donartype"  class="sel" required>
+              <option value="Are You First Time Donar">Are You First Time Donar?</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </label>
+          <label for="medicine" name = "medicine">
+            <select name="medicine" id="medicine" placeholder="medicine" class="sel" required>
+              <option value="Are You Taking Any Medicines">Are You Taking any Medicines?</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </label>
+          <label for="lastdonation" name = "lastdonation" required >
+            <select name="lastdonation" id="lastdonation" placeholder="lastdonation" class="sel" required>
+              <option value="When did you last donated Blood">When did you last donated Blood?</option>
+              <option value="more than 3 Months">more than 3 Months</option>
+              <option value="less than 3 Months">less than 3 Months</option>
+            </select>
+          </label>
+          <label for="immunizations" name = "immunizations " >
+            <select name="immunizations " id="immunizations " placeholder="immunizations " class="sel" required>
+              <option value="Have you received any immunizations in the past month?">Have you received any immunizations in the past month??</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </label>
+          <label for="Malaria" name = "Malaria">
+            <select name="Malaria" id="Malaria" placeholder="Malaria" class="sel" required>
+              <option value="Have you been treated for Malaria in the past 3 months?">Have you been treated for Malaria in the past 3 months?</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </label>
+          <label for="recieveblood" name = "recieveblood"  >
+            <select name="recieveblood" id="recieveblood" placeholder="recieveblood" class="sel" required>
+              <option value="Have you received blood in the past 6 months?">Have you received blood in the past 6 months?</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </label>
+          <label for="jaundice" name = "jaundice">
+            <select required  name="jaundice" id="jaundice" placeholder="jaundice" class="sel" required>
+              <option value= "Have you had close contact with someone diagnosed with hepatitis or yellow jaundice in the past 6 months?">Have you had close contact with someone diagnosed with hepatitis or yellow jaundice in the past 6 months?</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </label>
+          <button class="submit">Next→</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

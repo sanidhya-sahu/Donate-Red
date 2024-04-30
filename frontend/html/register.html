@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="..\Css\register.css">
+</head>
+<body>
+    <header class="header">
+        <div class="div_header">
+          <div class="logo">
+            <img src="..\Assets\logo.png" alt="Donate Red" class="img" />
+          </div>
+          <div class="navbar">
+            <ul class="navbar_list">
+              <li><a href="/Home"></a>Home</li>
+              <li><a href="/Find Donar"></a>Find Donar</li>
+              <li><a href="/About Us"></a>About Us</li>
+              <li><a href="/Blogs"></a>Blogs</li>
+              <li><a href="Contacct Us"></a>Conatact</li>
+            </ul>
+            <button style="color: white;" class="button">Login / Register</button>
+          </div>
+        </div>
+      </header>
+      <div class="register">
+        <form class="form" method="post" action="\register">
+            <p class="title">Register </p>
+            <!-- <p class="message"> Signup now  </p> -->
+                <div class="flex">
+                <label>
+                    <input required placeholder="" type="text" class="input">
+                    <span>Firstname</span>
+                </label>
+        
+                <label>
+                    <input required placeholder="" type="text" class="input">
+                    <span>Lastname</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input  placeholder="" type="email" class="input" required>
+                <span>Email</span>
+            </label> 
+            <label>
+              <input placeholder="" type="text" id="city" name="city" class="input" required />
+              <span>City</span>
+            </label>
+            <label>
+              <input  placeholder="" type="text" id="state" name="state" class="input" required />
+              <span>  State</span>
+            </label>
+                
+            <label>
+                <input required placeholder="" type="password" class="input">
+                <span>Password</span>
+            </label>
+            <label>
+                <input required placeholder="" type="password" class="input">
+                <span>Confirm password</span>
+            </label>
+            <button class="submit">Submit</button>
+            <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
+        </form>
+      </div>
+</body>
+</html>

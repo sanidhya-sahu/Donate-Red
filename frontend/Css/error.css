@@ -1,0 +1,10 @@
+.one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.er{
+    color:black;
+    text-decoration: solid;
+}
