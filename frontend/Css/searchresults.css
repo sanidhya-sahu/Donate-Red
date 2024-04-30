@@ -151,8 +151,8 @@ table{
   margin-top: 2%;
   margin-bottom: 2%;
   width: 90vw;
-  border: 2px solid black;
-  background-color:rgb(215, 239, 250)
+  border: 2px solid rgb(215, 239, 250);
+  background-color:rgb(215, 239, 250);
 }  
 
 table tr th{
@@ -168,7 +168,13 @@ table thead tr th{
   font-weight: bold;
   color: black;
 }
-
+th{
+  border: 1px solid rgb(160 160 160);
+}
 .t{
   color: white;
+}
+
+tr:hover{
+  background-color: rgb(163 206 225);
 }

@@ -6,7 +6,7 @@ const path = require('path')
 
 const router = express()
 
-const frontPath = path.join(__dirname, '../', 'public', '/')
+const frontPath = path.join(__dirname, '../../', 'frontend', '/')
 router.use(express.static(frontPath));
 
 function isLoggedIn(req, res, next) {
@@ -18,12 +18,23 @@ function isLoggedIn(req, res, next) {
     }
 }
 
-router.post(`/login`, (req, res) => {
+function duallogged(req, res, next) {
+    if (req.session.logsuccess == true) {
+        res.redirect('/')
+    }
+    else {
+        next()
+    }
+}
+
+
+router.post(`/login`,duallogged, (req, res) => {
     userSchema.findOne({ accID: fastHashCode.fastHashCode(req.body.email), pass: fastHashCode.fastHashCode(req.body.password) })
         .then((found) => {
             if (found != null) {
                 req.session.logsuccess = true;
-                res.redirect(`/`)
+                req.session.user = found
+                res.redirect('/')
             }
             else{
                 res.status(401).sendFile(frontPath + 'HTML/error_401.html')
@@ -34,7 +45,7 @@ router.post(`/login`, (req, res) => {
         })
 })
 
-router.post(`/register`, (req, res) => {
+router.post(`/register`,duallogged, (req, res) => {
     userSchema.find({ accID: fastHashCode.fastHashCode(req.body.email) })
         .then((found) => {
             if (Object.keys(found).length === 0) {
@@ -64,7 +75,7 @@ router.post(`/register`, (req, res) => {
                     })
             }
             else {
-                res.sendFile(frontPath + 'HTML/error_11000.html')
+                res.sendFile(frontPath + 'HTML/error.html')
                 // res.send("email already exists , redirecting...")
             }
         })
@@ -84,13 +95,26 @@ router.get(`/findDonorDetails`,(req,res)=>{
                 res.send(obj)
             }
             else{
-                res.status(401).sendFile(frontPath + 'HTML/error_401.html')
+                res.status(401).sendFile(frontPath + 'HTML/error.html')
             }
         })
         .catch((err) => {
-            res.status(401).sendFile(frontPath + 'HTML/error_401.html')
+            res.status(401).sendFile(frontPath + 'HTML/error.html')
         })
 })
 
+router.get(`/loggedin`,(req,res)=>{
+    if (req.session.logsuccess == true) {
+        res.send({
+            "stat":true,
+            "user":req.session.user
+        })
+    }
+    else {
+        res.send({
+            "stat":false
+        })
+    }
+})
 
 module.exports = router

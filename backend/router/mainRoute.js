@@ -36,18 +36,41 @@ router.get(`/donate`, isLoggedIn, (req, res) => {
 
 
 router.get(`/logpage`,(req,res)=>{
-    res.sendFile(frontPath + `HTML/login.html`)
+    if (req.session.logsuccess == true) {
+        res.redirect('/')
+    }
+    else{
+        res.sendFile(frontPath + `HTML/login.html`)
+    }
 })
 router.get(`/login`,(req,res)=>{
-    res.sendFile(frontPath + `HTML/login.html`)
+    if (req.session.logsuccess == true) {
+        res.redirect('/')
+    }
+    else{
+        res.sendFile(frontPath + `HTML/login.html`)
+    }
 })
 router.get(`/register`,(req,res)=>{
-    res.sendFile(frontPath + `HTML/register.html`)
+    if (req.session.logsuccess == true) {
+        res.redirect('/')
+    }
+    else{
+        res.sendFile(frontPath + `HTML/register.html`)
+    }
 })
 router.get(`/about`,(req,res)=>{
     res.sendFile(frontPath + `HTML/aboutus.html`)
 })
-
+router.get(`/contact`,(req,res)=>{
+    res.sendFile(frontPath + `HTML/aboutus.html`)
+})
+router.get(`/home`,(req,res)=>{
+    res.sendFile(frontPath + `HTML/index.html`)
+})
+router.get(`/find`,(req,res)=>{
+    res.sendFile(frontPath + `HTML/find.html`)
+})
 
 
 
