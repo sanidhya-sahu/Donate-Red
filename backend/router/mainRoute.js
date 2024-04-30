@@ -71,6 +71,9 @@ router.get(`/home`,(req,res)=>{
 router.get(`/find`,(req,res)=>{
     res.sendFile(frontPath + `HTML/find.html`)
 })
+router.get(`/error`,(req,res)=>{
+    res.sendFile(frontPath + `HTML/error.html`)
+})
 
 
 
