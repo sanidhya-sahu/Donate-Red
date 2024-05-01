@@ -1,62 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find Donar</title>
-    <link rel="stylesheet" href="..\Css\find.css" />
-    <script src="../js/logCheck.js" defer></script>
-  </head>
-  <body>
-    <header class="header">
-      <div class="div_header">
-        <div class="logo">
-          <img src="..\Assets\logo.png" alt="Donate Red" class="img" />
-        </div>
-        <div class="navbar">
-          <ul class="navbar_list">
-            <li>
-              <a style=" color: white; text-decoration: none;" href='/home'>Home</a>
-            </li>
-            <li>
-              <a style=" color: white; text-decoration: none;" href='/find'>Find Donar</a>
-            </li>
-            <li>
-              <a style=" color: white; text-decoration: none; "href='/about'>About Us</a>
-            </li>
-            <li>
-              <a style=" color: white; text-decoration: none;" href='/blog'>Blogs</a>
-            </li>
-            <li>
-              <a style=" color: white; text-decoration: none; "href='/about'>Conatact</a>
-            </li>
-          </ul>
-          <button id="headLoginButton" onclick="window.location.href=`/login`" style="color: white" class="button">Login / Register</button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
+  <title>Find Donar</title>
+  <link rel="stylesheet" href="..\Css\find.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="div_header">
+      <div class="logo">
+        <img src="..\Assets\logo.png" alt="Donate Red" class="img" />
       </div>
-    </header>
-    <div class="main">
-      <div class="content">
-        <div class="img-div">
-          <img src="..\Assets\blood-icon.png" alt="" height="70px" width="70px" />
-        </div>
-        <div class="heading">
-          <h1 class="connect">Find Donar</h1>
-        </div>
-        <div class="para">
-          <p class="text">
-            "Every drop counts. Search for a donor who can make a life-saving
-            difference today."
-          </p>
-        </div>
-        <div class="img22">
-          <img src="..\Assets\donate.jpg" alt="" />
-        </div>
+      <div class="navbar">
+        <ul class="navbar_list">
+          <li><a href="/Home"></a>Home</li>
+          <li><a href="/Find Donar"></a>Find Donar</li>
+          <li><a href="/About Us"></a>About Us</li>
+          <li><a href="/Blogs"></a>Blogs</li>
+          <li><a href="Contacct Us"></a>Conatact</li>
+        </ul>
+        <button onclick="window.location.href=`/login`" style="color: white" class="button">Login / Register</button>
       </div>
-      <div class="form-box">
-        <form class="form" method="post " action="/findBlood"> 
-          <p class="title">Find Donar</p>
-          <!-- <div class="flex">
+    </div>
+  </header>
+  <div class="main">
+    <div class="content">
+      <div class="img-div">
+        <img src="..\Assets\blood-icon.png" alt="" height="70px" width="70px" />
+      </div>
+      <div class="heading">
+        <h1 class="connect">Find Donar</h1>
+      </div>
+      <div class="para">
+        <p class="text">
+          "Every drop counts. Search for a donor who can make a life-saving
+          difference today."
+        </p>
+      </div>
+      <div class="img22">
+        <img style="border-radius: 20px;" src="..\Assets\donate.jpg" alt="" />
+      </div>
+    </div>
+    <div class="form-box">
+      <form class="form" method="post" action="\findBlood">
+        <p class="title">Find Donar</p>
+        <!-- <div class="flex">
             <label>
               <input required="" placeholder="" type="text" class="input" />
               <span>Firstname</span>
@@ -84,31 +76,32 @@
             <input required="" placeholder="" type="email" class="input" />
             <span>Email</span>
           </label> -->
-          <label for="blood-type" name = "blood-type">
-            <select name="bloodtype" id="blood-type" placeholder="Blood-Type" required>
-              <option value="Select Your Blood Type">Select Your Blood Type</option>
-              <option value="A+">A+</option>
-              <option value="A-">A-</option>
-              <option value="B+">B+</option>
-              <option value="B-">B-</option>
-              <option value="AB+">AB+</option>
-              <option value="AB-">AB-</option>
-              <option value="O+">O+</option>
-              <option value="O-">O-</option>
-            </select>
-            <!-- <span>Blood type</span> -->
-          </label>
-          <label>
-            <input required="" placeholder="" type="text" id="city" name="city" class="input" required />
-            <span>City</span>
-          </label>
-          <label>
-            <input required="" placeholder="" type="text" id="state" name="state" class="input" required />
-            <span>  State</span>
-          </label>
-          <button class="submit">Submit</button>
-        </form>
-      </div>
+        <label for="blood-type" name="blood-type">
+          <select name="bloodtype" id="blood-type" placeholder="Blood-Type" required>
+            <option value="Select Your Blood Type">Select Your Blood Type</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+          <!-- <span>Blood type</span> -->
+        </label>
+        <label>
+          <input required="" placeholder="" type="text" id="city" name="city" class="input" required />
+          <span>City</span>
+        </label>
+        <label>
+          <input required="" placeholder="" type="text" id="state" name="state" class="input" required />
+          <span> State</span>
+        </label>
+        <button class="submit">Submit</button>
+      </form>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

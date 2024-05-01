@@ -117,4 +117,14 @@ router.get(`/loggedin`,(req,res)=>{
     }
 })
 
+router.get('/logout', async (req, res) => {
+    req.session.destroy(async err => {
+        if (err) {
+            res.status(401).sendFile(frontPath + 'html/error.html')
+        } else {
+            res.redirect('/');
+        }
+    });
+});
+
 module.exports = router

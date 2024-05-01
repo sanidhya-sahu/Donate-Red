@@ -1,27 +1,45 @@
 const express = require('express')
 const router = express()
 const BloodInventory = require('../Models/blood')
+const path = require('path')
+const frontPath = path.join(__dirname, '../../', 'frontend', '/')
+router.use(express.static(frontPath));
 
 router.post(`/findBlood`, async (req, res) => {
     BloodInventory.find({})
         .then(found => {
-            const type = req.body.bloodtype
-            const state = req.body.state
-            const data = found[type][state]
-            const respObj = {
-                "data": {...data},
-                "res":true,
-                "req":{
-                    type : type,
-                    state :state,
-                    city : req.body.city
+            const type = String(req.body.bloodtype).toLowerCase()
+            const state = String(req.body.state).toLowerCase()
+            const data = found[0][type][state]
+            if (data != null) {   
+                const respObj = {
+                    "data": {...data},
+                    "res":true,
+                    "req":{
+                        type : type,
+                        state :state,
+                        city : String(req.body.city).toLowerCase()
+                    }
                 }
+                req.session.responseObject = respObj
+                res.sendFile(frontPath + `HTML/searchresult.html`)
             }
-            res.send(respObj)
+            else{
+                throw new Error('This is a custom error message');
+            }
         })
         .catch(err => {
-            res.send({"res":false})
+            const respObj = {
+                "res":false,
+                "error":err
+            }
+            req.session.responseObject = respObj
+            res.sendFile(frontPath + `HTML/searchresult.html`)
         })
+})
+
+router.get(`/listresults`,(req,res)=>{
+    res.send(req.session.responseObject)
 })
 
 module.exports = router
