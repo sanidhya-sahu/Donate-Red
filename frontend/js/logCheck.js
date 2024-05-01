@@ -4,11 +4,11 @@ window.addEventListener('load',()=>{
     .then((res)=>{
         if (res.stat == true) {
             document.getElementById('headLoginButton').style.display = "none"
-            document.getElementById('regButton').style.display = "none"
             document.getElementById('nav').innerHTML += `
             <h5 style="font-family: var(--ff-poppins);color: white;font-weight: 500;font-size: medium;"><a style=" color: white; text-decoration: none; "href='/logout'>Logout</a></h5>&nbsp;&nbsp;&nbsp;
             <h3 style="font-weight: bold;font-family: var(--ff-poppins);color: white;margin-left: 20px;">Sanidhya</h3>
             `
+            document.getElementById('regButton').style.display = "none"
             document.getElementById('mainButton').innerHTML = `
             <button
                 style="color: white; background-color: hsl(225, 68%, 53%)"

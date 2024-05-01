@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results</title>
-    <link rel="stylesheet" href="..\Css\searchresults.css">
+  <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
+  <link rel="stylesheet" href="..\Css\searchresults.css">
     <script src="../js/logCheck.js" defer></script>
     <script src="../js/searchresult.js" defer></script>
 </head>
@@ -13,19 +14,7 @@
 <body>
     <header class="header">
         <div class="div_header">
-            <div class="logo">
-                <img src="..\Assets\logo.png" alt="Donate Red" class="img" />
-            </div>
-            <div class="navbar">
-                <ul class="navbar_list">
-                    <li><a href="/Home"></a>Home</li>
-                    <li><a href="/Find Donar"></a>Find Donar</li>
-                    <li><a href="/About Us"></a>About Us</li>
-                    <li><a href="/Blogs"></a>Blogs</li>
-                    <li><a href="Contacct Us"></a>Conatact</li>
-                </ul>
-                <button style="color: white" class="button">Login / Register</button>
-            </div>
+            
           <div class="logo">
             <img src="..\Assets\logo.png" alt="Donate Red" class="img" />
           </div>
@@ -47,7 +36,7 @@
                   <a style=" color: white; text-decoration: none; "href='/about'>Conatact</a>
                 </li>
               </ul>
-            <button id="headLoginButton" style="color: white" class="button">Login / Register</button>
+            <button onclick="window.location.href=`/login`" id="headLoginButton" style="color: white" class="button">Login / Register</button>
           </div>
         </div>
     </header>
