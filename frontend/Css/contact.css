@@ -119,78 +119,43 @@ button:hover svg {
 button:active {
   transform: scale(0.95);
 }
-
 .main{
-  height: 100vh;
-  display: flex;
+    display: flex;
+    width: 100vw;
+    height: 90vh;
 }
 
-.aside{
-  width: 20vw;
-  height: 117vh;
-  background-color: hsl(218, 71%, 11%);
-}
-.content{
-  width: 80vw;
-}
-
-.user{
-  border-radius: 50%;
-    margin: 8%;
-    height: 17%;
-    width: 48%;
+.touch{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1%
 }
 
-.adetails{
-  margin: 5%;
-  margin-left: 8%;
-  color: white;
-  font-weight: bold
-  
+.contact{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    background-color: hsl(218, 71%, 11%);
 }
 
-.h3{
-  color: hsl(225, 68%, 53%);
-  margin-left: 8%;
+.get{
+    font-weight: bold;
+    color: var(--oxford-blue-1);
+    /* font-size: var(--fs-2); */
+    font-size: 4rem;
+    line-height: 1.2;
 }
 
-.verify{
-  margin: 1.5%;
-  /* margin-block: 15px 30px;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px; */
-  /* font-weight: bold; */
-  color: var(--oxford-blue-1);
-  /* font-size: var(--fs-2); */
-  font-size: 4rem;
-  line-height: 1.2;
-  margin-top: 48px;
-  margin-bottom: 48px;
+.want{
+    /* color: var(--royal-blue-light); */
+    font-family: var(--ff-poppins);
+    /* font-size: var(--fs-6); */
+    font-size: 1rem;
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    color: hsl(0, 0%, 47%)
 }
-
-.medi{
-  color: hsl(225, 68%, 53%);
-  margin-left: 2%;
-  font-size: 1.3rem;;
-}
-
-.mdetails{
-  margin: 1%;
-  margin-left: 2%;
-  color: hsl(0, 0%, 47%);
-  font-size: 17px
-}
-
-.n{
-  margin: 4% 0% 0% 38%;
-}
-
-.form{
-  margin: -3% 0% 0% 20.3%;
-  width: 50vw;
-}
-
-form label{
-  color: hsl(0, 0%, 47%) ;
-  margin-left: 1%;
-}
+    
+    
