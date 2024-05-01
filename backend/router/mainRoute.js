@@ -31,9 +31,17 @@ function isLoggedIn(req, res, next) {
 }
 
 router.get(`/donate`, isLoggedIn, (req, res) => {
-    res.sendFile(frontPath + `HTML/donate.html`)
+    const user = req.session.user
+    if (user.donarReg == false) {
+        res.sendFile(frontPath + `HTML/check2.html`)
+    }
+    else if(user.donarReg == true){
+        res.sendFile(frontPath + `HTML/alreadyReg.html`)
+    }
+    else{
+        res.sendFile(frontPath + `HTML/error.html`)
+    }
 })
-
 
 router.get(`/logpage`,(req,res)=>{
     if (req.session.logsuccess == true) {
