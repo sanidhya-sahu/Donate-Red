@@ -154,18 +154,31 @@ button:active {
 }
 
 .verify{
-  margin: 1%;
+  margin: 1.5%;
   /* margin-block: 15px 30px;
   margin-inline-start: 0px;
   margin-inline-end: 0px; */
   /* font-weight: bold; */
   color: var(--oxford-blue-1);
   /* font-size: var(--fs-2); */
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 1.2;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .medi{
   color: hsl(225, 68%, 53%);
-  margin-left: 3%;
+  margin-left: 2%;
+  font-size: 1.3rem;;
+}
+
+.mdetails{
+  margin: 1%;
+  color: hsl(0, 0%, 47%);
+  font-size: 17px
+}
+
+.n{
+  margin: 4% 0% 0% 38%;
 }
