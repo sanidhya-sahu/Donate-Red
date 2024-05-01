@@ -5,7 +5,7 @@ const mongoURL = "mongodb://127.0.0.1:27017/BloodInventory";
 
 const connectDB = async () =>{
     try {
-        await mongoose.connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true });     
+        await mongoose.connect(mongoURL);     
         console.log("db-/");
     } catch (error) {
         console.log(error);

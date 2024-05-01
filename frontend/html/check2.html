@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enter Details 2</title>
+    <title>Enter Details</title>
   <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
   <link rel="stylesheet" href="..\Css\check2.css" />
     <script src="../js/logCheck.js" defer></script>
+    <script src="../js/formValidate.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -56,7 +57,7 @@
         </div>
       </div>
       <div class="form-box">
-        <form class="form" method="post" action="">
+        <form class="form" method="post" action="/donarDetailsSave1">
           <p class="title">Enter Your Details</p>
           <label for="firstdonar" name = "firstdonar">
             <select name="donartype" id="donartype" placeholder="donartype"  class="sel" required>
@@ -74,13 +75,13 @@
           </label>
           <label for="lastdonation" name = "lastdonation" required >
             <select name="lastdonation" id="lastdonation" placeholder="lastdonation" class="sel" required>
-              <option value="When did you last donated Blood">When did you last donated Blood?</option>
-              <option value="more than 3 Months">more than 3 Months</option>
-              <option value="less than 3 Months">less than 3 Months</option>
+              <option value="When did you last donated Blood">Did you donate blood in previous 3 Months?</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
             </select>
           </label>
           <label for="immunizations" name = "immunizations " >
-            <select name="immunizations " id="immunizations " placeholder="immunizations " class="sel" required>
+            <select name="immunizations" id="immunizations" placeholder="immunizations " class="sel" required>
               <option value="Have you received any immunizations in the past month?">Have you received any immunizations in the past month??</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
@@ -107,8 +108,8 @@
               <option value="No">No</option>
             </select>
           </label>
-          <button class="submit">Next→</button>
         </form>
+        <button onclick="validateAndAlertForm()" class="submit">Next→</button>
       </div>
     </div>
   </body>

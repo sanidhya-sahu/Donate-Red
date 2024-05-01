@@ -3,6 +3,7 @@ const cors = require('cors')
 const bloodRoute = require('./router/bloodRoute')
 const userRoute = require('./router/userRoute')
 const mainRoute = require('./router/mainRoute')
+const donateRoute = require('./router/donateRoute')
 const connectDB = require("./helpers/db")
 
 const app = express()
@@ -20,6 +21,6 @@ app.use(function (req, res, next) {
 
 
 
-app.use(`/`, mainRoute, bloodRoute, userRoute)
+app.use(`/`, mainRoute, bloodRoute, userRoute, donateRoute)
 
 app.listen(80, () => { console.log("running on http://127.0.0.1/") })

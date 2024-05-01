@@ -16,11 +16,9 @@
   --fs-2: 8rem;
   --fw-700: 700;
   --sonic-silver: hsl(0, 0%, 47%);
-  --gradient: linear-gradient(
-    90deg,
-    var(--carolina-blue) 0%,
-    var(--royal-blue-light) 100%
-  );
+  --gradient: linear-gradient(90deg,
+      var(--carolina-blue) 0%,
+      var(--royal-blue-light) 100%);
   --deg: -90deg;
   --carolina-blue: hsl(201, 92%, 47%);
   --white: hsl(0, 0%, 100%);
@@ -103,10 +101,10 @@ button {
 
 button:hover {
   /* background: #c4e201; */
-  background:hsl(225, 68%, 53%);
+  background: hsl(225, 68%, 53%);
 }
 
-button > svg {
+button>svg {
   width: 34px;
   margin-left: 10px;
   transition: transform 0.3s ease-in-out;
@@ -152,6 +150,7 @@ button:active {
   font-size: 4rem;
   line-height: 1.2;
 }
+
 .text {
   /* font-size: var(--fs-6); */
   font-size: 1.5rem;
@@ -243,7 +242,7 @@ button:active {
   border-radius: 10px;
 }
 
-.form label .input + span {
+.form label .input+span {
   position: absolute;
   left: 10px;
   top: 15px;
@@ -253,19 +252,19 @@ button:active {
   transition: 0.3s ease;
 }
 
-.form label .input:placeholder-shown + span {
+.form label .input:placeholder-shown+span {
   top: 15px;
   font-size: 0.9em;
 }
 
-.form label .input:focus + span,
-.form label .input:valid + span {
+.form label .input:focus+span,
+.form label .input:valid+span {
   top: 30px;
   font-size: 0.7em;
   font-weight: 600;
 }
 
-.form label .input:valid + span {
+.form label .input:valid+span {
   color: green;
 }
 
@@ -279,6 +278,10 @@ button:active {
   color: #fff;
   font-size: 16px;
   transform: 0.3s ease;
+  margin-top: 20px;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
 .submit:hover {
@@ -303,9 +306,10 @@ button:active {
   justify-content: center;
   height: 85vh;
   width: 45vw;
+  flex-direction: column;
 }
 
-.select{
+.select {
   width: 100%;
   padding: 10px 10px 20px 10px;
   outline: 0;
@@ -313,10 +317,10 @@ button:active {
   border-radius: 10px;
 }
 
-.sel{
+.sel {
   padding: 10px 10px 20px 10px;
-    outline: 0;
-    border: 1px solid rgba(105, 105, 105, 0.397);
-    border-radius: 10px;
-    width: 105%;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+  width: 105%;
 }

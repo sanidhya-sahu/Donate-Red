@@ -39,6 +39,10 @@ const userSchema = new Schema({
     pass:{
         type:String,
         required:true
+    },
+    donarReg:{
+        type:Boolean,
+        default: false
     }
 }
 );
