@@ -4,6 +4,8 @@ window.addEventListener('load',()=>{
     .then((response) =>{
         if (response.stat == true) {
             const user = response.data.user
+            const details1 = response.data.details1
+            const details2 = response.data.details2
             document.getElementById('name').innerText = user.name
             document.getElementById('phone').innerText = user.phone
             document.getElementById('email').innerText = user.email
@@ -11,8 +13,6 @@ window.addEventListener('load',()=>{
             document.getElementById('bloodGrp').innerText = user.bloodGrp
             document.getElementById('state').innerText = user.state
             document.getElementById('city').innerText = user.city
-            const details1 = response.data.details1
-            const details2 = response.data.details2
             document.getElementById('firstdonar').innerText = details1.donartype
             document.getElementById('medicine').innerText = details1.medicine
             document.getElementById('lastdonate').innerText = details1.lastdonation
@@ -36,3 +36,27 @@ window.addEventListener('load',()=>{
         }
     })
 })
+
+function registerdonar() {
+    const input = document.getElementById('concent').checked
+    if (input == true) {
+        fetch(`/validateDonar`)
+        .then(resp=>resp.json())
+        .then((response)=>{
+            if (response.stat == true) {   
+                if (response.valid == true) {
+                    window.location.href = '/thank'
+                }
+                else{
+                    window.location.href = "/rejected"
+                }
+            }
+            else{
+                window.location.href = "/error"
+            }
+        })
+    }
+    else{
+        alert('Give concent to register as a donar')
+    }
+}

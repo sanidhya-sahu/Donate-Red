@@ -36,7 +36,7 @@ router.get(`/donate`, isLoggedIn, (req, res) => {
         res.sendFile(frontPath + `HTML/check2.html`)
     }
     else if(user.donarReg == true){
-        res.sendFile(frontPath + `HTML/alreadyReg.html`)
+        res.sendFile(frontPath + `HTML/already.html`)
     }
     else{
         res.sendFile(frontPath + `HTML/error.html`)
