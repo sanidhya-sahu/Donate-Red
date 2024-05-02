@@ -42,7 +42,7 @@ async function validateAndAlertForm1() {
             "Rabies": Rabies,
             "jaundice": jaundice
         }
-        fetch(`/donarDetailsSave1?res=${queryObj}`)
+        fetch(`/donarDetailsSave1?donartype=${queryObj.donartype}&medicine=${queryObj.medicine}&lastdonation=${queryObj.lastdonation}&immunizations=${queryObj.immunizations}&Malaria=${queryObj.Malaria}&recieveblood=${queryObj.recieveblood}&Rabies=${queryObj.Rabies}&jaundice=${queryObj.jaundice}`)
         .then(resp => resp.json())
         .then((response) => {
             if (response.stat == true) {
@@ -66,44 +66,44 @@ async function validateAndAlertForm2() {
     var Heart = document.getElementById('Heart').checked
     var Allergy = document.getElementById('Allergy').checked
     var queryObj = {
-        "Diabetes": false,
-        "Cancer": false,
-        "Tuberculosis": false,
-        "asthma": false,
-        "liver": false,
-        "kidney": false,
-        "clot": false,
-        "Heart": false,
-        "Allergy": false
+        "Diabetes": "No",
+        "Cancer": "No",
+        "Tuberculosis": "No",
+        "asthma": "No",
+        "liver": "No",
+        "kidney": "No",
+        "clot": "No",
+        "Heart": "No",
+        "Allergy": "No"
     }
     if (Diabetes == true) {
-        queryObj.Diabetes = true
+        queryObj.Diabetes = "Yes"
     }
     else if(Cancer == true){
-        queryObj.Cancer = true
+        queryObj.Cancer = "Yes"
     }
     else if(Tuberculosis == true){
-        queryObj.Tuberculosis = true
+        queryObj.Tuberculosis = "Yes"
     }
     else if(asthma == true){
-        queryObj.asthma = true
+        queryObj.asthma = "Yes"
     }
     else if(liver == true){
-        queryObj.liver = true
+        queryObj.liver = "Yes"
     }
     else if(kidney == true){
-        queryObj.kidney = true
+        queryObj.kidney = "Yes"
     }
     else if(clot == true){
-        queryObj.clot = true
+        queryObj.clot = "Yes"
     }
     else if(Heart == true){
-        queryObj.Heart = true
+        queryObj.Heart = "Yes"
     }
     else if(Allergy == true){
-        queryObj.Allergy = true
+        queryObj.Allergy = "Yes"
     }
-    fetch(`/donarDetailsSave2?res=${queryObj}`)
+    fetch(`/donarDetailsSave2?Diabetes=${queryObj.Diabetes}&Cancer=${queryObj.Cancer}&Tuberculosis=${queryObj.Tuberculosis}&asthma=${queryObj.asthma}&liver=${queryObj.liver}&kidney=${queryObj.kidney}&clot=${queryObj.clot}&Heart=${queryObj.Heart}&Allergy=${queryObj.Allergy}`)
         .then(resp => resp.json())
         .then((response) => {
             if (response.stat == true) {

@@ -199,10 +199,17 @@ form label {
   margin-left: 1%;
 }
 
-.condition{
+.format {
+  text-transform: capitalize;
+}
+
+.condition {
   margin-left: 5%;
 }
 
-.condition li{
+.condition li {
   color: var(--sonic-silver);
+}
+span{
+  font-weight: bold;
 }
