@@ -210,3 +210,6 @@ form label {
 .condition li {
   color: var(--sonic-silver);
 }
+span{
+  font-weight: bold;
+}
