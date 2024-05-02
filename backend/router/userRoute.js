@@ -37,11 +37,11 @@ router.post(`/login`,duallogged, (req, res) => {
                 res.redirect('/')
             }
             else{
-                res.status(401).sendFile(frontPath + 'HTML/error.html')
+                res.status(401).sendFile(frontPath + 'html/error.html')
             }
         })
         .catch((err) => {
-            res.status(401).sendFile(frontPath + 'HTML/error.html')
+            res.status(401).sendFile(frontPath + 'html/error.html')
         })
 })
 
@@ -63,20 +63,20 @@ router.post(`/register`,duallogged, (req, res) => {
                 })
                 newUser.save()
                     .then((saved) => {
-                        res.sendFile(frontPath + 'HTML/login.html')
+                        res.sendFile(frontPath + 'html/login.html')
                     })
                     .catch(err => {
                         // console.log(err);
                         if (err.code == 11000) {
-                            res.sendFile(frontPath + 'HTML/error.html')
+                            res.sendFile(frontPath + 'html/error.html')
                         }
                         else {
-                            res.sendFile(frontPath + 'HTML/error.html')
+                            res.sendFile(frontPath + 'html/error.html')
                         }
                     })
             }
             else {
-                res.sendFile(frontPath + 'HTML/error.html')
+                res.sendFile(frontPath + 'html/error.html')
                 // res.send("email already exists , redirecting...")
             }
         })
@@ -96,11 +96,11 @@ router.get(`/findDonorDetails`,(req,res)=>{
                 res.send(obj)
             }
             else{
-                res.status(401).sendFile(frontPath + 'HTML/error.html')
+                res.status(401).sendFile(frontPath + 'html/error.html')
             }
         })
         .catch((err) => {
-            res.status(401).sendFile(frontPath + 'HTML/error.html')
+            res.status(401).sendFile(frontPath + 'html/error.html')
         })
 })
 

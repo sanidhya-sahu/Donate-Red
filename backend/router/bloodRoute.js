@@ -32,7 +32,7 @@ router.post(`/findBlood`, async (req, res) => {
                     }
                 }
                 req.session.responseObject = respObj
-                res.sendFile(frontPath + `HTML/searchresult.html`)
+                res.sendFile(frontPath + `html/searchresult.html`)
             }
             else{
                 throw new Error('This is a custom error message');
@@ -45,7 +45,7 @@ router.post(`/findBlood`, async (req, res) => {
                 "error":err
             }
             req.session.responseObject = respObj
-            res.sendFile(frontPath + `HTML/searchresult.html`)
+            res.sendFile(frontPath + `html/searchresult.html`)
         })
 })
 

@@ -71,10 +71,10 @@ router.get(`/donarDetailsSave2`, isLoggedIn, (req, res) => {
 
 
 router.get(`/check3`, isLoggedIn, (req, res) => {
-    res.sendFile(frontPath + `HTML/check3.html`)
+    res.sendFile(frontPath + `html/check3.html`)
 })
 router.get(`/showDetails`, isLoggedIn, (req, res) => {
-    res.sendFile(frontPath + `HTML/details.html`)
+    res.sendFile(frontPath + `html/details.html`)
 })
 router.get(`/fetchDetails`, isLoggedIn, (req, res) => {
     try {
@@ -94,10 +94,10 @@ router.get(`/fetchDetails`, isLoggedIn, (req, res) => {
     }
 })
 router.get(`/thank`, isLoggedIn, (req, res) => {
-    res.sendFile(frontPath + `HTML/thank.html`)
+    res.sendFile(frontPath + `html/thank.html`)
 })
 router.get(`/rejected`, isLoggedIn, (req, res) => {
-    res.sendFile(frontPath + `HTML/noteligible.html`)
+    res.sendFile(frontPath + `html/noteligible.html`)
 })
 
 router.get(`/validateDonar`, isLoggedIn, (req, res) => {
@@ -144,7 +144,7 @@ router.get(`/validateDonar`, isLoggedIn, (req, res) => {
         userSchema.find({ accID: req.session.user.accID })
             .then((found) => {
                 if (Object.keys(found).length === 0) {
-                    res.sendFile(frontPath + 'HTML/error.html')
+                    res.sendFile(frontPath + 'html/error.html')
                 }
                 else {
                     userSchema.updateOne({accID: req.session.user.accID },{ $set:{"donarReg":true}})
@@ -161,11 +161,11 @@ router.get(`/validateDonar`, isLoggedIn, (req, res) => {
                                     })
                                 })
                                 .catch(()=>{
-                                    res.sendFile(frontPath + 'HTML/error.html')
+                                    res.sendFile(frontPath + 'html/error.html')
                                 })
                             })
                             .catch(() => {
-                                res.sendFile(frontPath + 'HTML/error.html')
+                                res.sendFile(frontPath + 'html/error.html')
                             })
                 }
             })
