@@ -120,6 +120,7 @@ button:active {
 }
 
 .main {
+  margin-top: 3%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
