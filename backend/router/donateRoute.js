@@ -153,22 +153,17 @@ router.get(`/validateDonar`, isLoggedIn, (req, res) => {
                             const userBlood = String(req.session.user.bloodGrp).toLowerCase()
                             const state = String(req.session.user.state).toLowerCase()
                             const city = String(req.session.user.city).toLowerCase()
+                            BloodInventory.updateOne({}, { $push: { [`${userBlood}.${state}.${city}`]: `${req.session.user.accID}` } })
+                                .then((done) => {
+                                    res.json({
+                                        "stat": true,
+                                        "valid": true
+                                    })
+                                })
+                                .catch(() => {
+                                    res.sendFile(frontPath + 'html/error.html')
+                                })
 
-                            if (Object.keys(foundd).length === 0) {
-                                BloodInventory.updateOne({}, { $push: { [`${userBlood}.${state}.${city}`]: `${req.session.user.accID}` } })
-                                    .then((done) => {
-                                        res.json({
-                                            "stat": true,
-                                            "valid": true
-                                        })
-                                    })
-                                    .catch(() => {
-                                        res.sendFile(frontPath + 'html/error.html')
-                                    })
-                            }
-                            else {
-                                res.sendFile(frontPath + 'html/error.html')
-                            }
 
                         })
                 }
