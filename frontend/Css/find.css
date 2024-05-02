@@ -98,7 +98,7 @@ button {
   border: 1px solid transparent;
   display: flex;
   align-items: center;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 button:hover {
@@ -121,6 +121,7 @@ button:active {
 }
 
 .main {
+  margin-top: 3%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
