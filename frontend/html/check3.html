@@ -7,6 +7,7 @@
   <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
   <link rel="stylesheet" href="..\Css\check3.css" />
     <script src="../js/logCheck.js" defer></script>
+    <script src="../js/formValidate.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -14,7 +15,7 @@
         <div class="logo">
           <img src="..\Assets\logo.png" alt="Donate Red" class="img" />
         </div>
-        <div class="navbar">
+        <div class="navbar" id="nav">
           <ul class="navbar_list">
             <li>
               <a style=" color: white; text-decoration: none;" href='/home'>Home</a>
@@ -56,15 +57,9 @@
         </div>
       </div>
       <div class="form-box">
-        <form class="form" method="post" action="">
+        <form class="form" method="post" action="#">
           <p class="title">Enter Your Details</p>
-          <label for="Rabies" name = "Rabies">
-            <select name="Rabies" id="Rabies" placeholder="Rabies"  class="sel" required>
-              <option value="Have you been treated for Rabies or received Hepatitis B immune globulin in the past year?">Have you been treated for Rabies or received Hepatitis B immune globulin in the past year?
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </label>
+          
           <p style="color: white;"> Have you ever been diagnosed with or currently suffer from any of the following conditions?</p>
           <div>
             <input type="checkbox" id="Diabetes" name="Diabetes" />
@@ -102,13 +97,10 @@
             <input type="checkbox" id="Allergy" name="Allergic disorder" />
             <label for="Allergic disorder">Allergic disorder</label>
           </div>
-          <div>
-            <input type="checkbox" name="none" id="none"> 
-            <label for="none">none</label>
-          </div>
+          <p style="color: white;"> Leave empty if none</p>
           
-          <button class="submit">Next→</button>
         </form>
+        <button onclick="validateAndAlertForm2()" class="submit">Next→</button>
       </div>
     </div>
   </body>

@@ -16,11 +16,9 @@
   --fs-2: 8rem;
   --fw-700: 700;
   --sonic-silver: hsl(0, 0%, 47%);
-  --gradient: linear-gradient(
-    90deg,
-    var(--carolina-blue) 0%,
-    var(--royal-blue-light) 100%
-  );
+  --gradient: linear-gradient(90deg,
+      var(--carolina-blue) 0%,
+      var(--royal-blue-light) 100%);
   --deg: -90deg;
   --carolina-blue: hsl(201, 92%, 47%);
   --white: hsl(0, 0%, 100%);
@@ -106,7 +104,7 @@ button:hover {
   background: red;
 }
 
-button > svg {
+button>svg {
   width: 34px;
   margin-left: 10px;
   transition: transform 0.3s ease-in-out;
@@ -120,41 +118,45 @@ button:active {
   transform: scale(0.95);
 }
 
-.main{
+.main {
   height: 100vh;
   display: flex;
 }
 
-.aside{
+.aside {
   width: 20vw;
   height: 117vh;
   background-color: hsl(218, 71%, 11%);
+  position: fixed;
+  left: 0;
 }
-.content{
+
+.content {
   width: 80vw;
+  position: absolute;
+  left: 20vw;
 }
 
-.user{
+.user {
   border-radius: 50%;
-    margin: 8%;
-    height: 17%;
-    width: 48%;
+  margin: 8%;
+  height: 17%;
+  width: 48%;
 }
 
-.adetails{
+.adetails {
   margin: 5%;
   margin-left: 8%;
   color: white;
   font-weight: bold
-  
 }
 
-.h3{
+.h3 {
   color: hsl(225, 68%, 53%);
   margin-left: 8%;
 }
 
-.verify{
+.verify {
   margin: 1.5%;
   /* margin-block: 15px 30px;
   margin-inline-start: 0px;
@@ -165,32 +167,34 @@ button:active {
   font-size: 4rem;
   line-height: 1.2;
   margin-top: 48px;
-  margin-bottom: 48px;
+  margin-bottom: 65px;
 }
 
-.medi{
+.medi {
   color: hsl(225, 68%, 53%);
   margin-left: 2%;
-  font-size: 1.3rem;;
+  font-size: 1.3rem;
+  ;
 }
 
-.mdetails{
+.mdetails {
   margin: 1%;
   margin-left: 2%;
   color: hsl(0, 0%, 47%);
   font-size: 17px
 }
 
-.n{
+.n {
   margin: 4% 0% 0% 38%;
 }
 
-.form{
+.form {
   margin: -3% 0% 0% 20.3%;
   width: 50vw;
+  margin-bottom: 20px;
 }
 
-form label{
-  color: hsl(0, 0%, 47%) ;
+form label {
+  color: hsl(0, 0%, 47%);
   margin-left: 1%;
 }

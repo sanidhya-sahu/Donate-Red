@@ -15,7 +15,7 @@
         <div class="logo">
           <img src="..\Assets\logo.png" alt="Donate Red" class="img" />
         </div>
-        <div class="navbar">
+        <div class="navbar" id="nav">
           <ul class="navbar_list">
             <li>
               <a style=" color: white; text-decoration: none;" href='/home'>Home</a>
@@ -57,7 +57,7 @@
         </div>
       </div>
       <div class="form-box">
-        <form class="form" method="post" action="/donarDetailsSave1">
+        <form class="form" method="post" action="#">
           <p class="title">Enter Your Details</p>
           <label for="firstdonar" name = "firstdonar">
             <select name="donartype" id="donartype" placeholder="donartype"  class="sel" required>
@@ -108,8 +108,15 @@
               <option value="No">No</option>
             </select>
           </label>
+          <label for="Rabies" name = "Rabies">
+            <select name="Rabies" id="Rabies" placeholder="Rabies"  class="sel" required>
+              <option value="Have you been treated for Rabies or received Hepatitis B immune globulin in the past year?">Have you been treated for Rabies or received Hepatitis B immune globulin in the past year?
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </label>
         </form>
-        <button onclick="validateAndAlertForm()" class="submit">Next→</button>
+        <button onclick="validateAndAlertForm1()" class="submit">Next→</button>
       </div>
     </div>
   </body>

@@ -1,4 +1,4 @@
-async function validateAndAlertForm() {
+async function validateAndAlertForm1() {
     var donartype = document.getElementById('donartype').value
     var medicine = document.getElementById('medicine').value
     var lastdonation = document.getElementById('lastdonation').value
@@ -6,6 +6,7 @@ async function validateAndAlertForm() {
     var Malaria = document.getElementById('Malaria').value
     var recieveblood = document.getElementById('recieveblood').value
     var jaundice = document.getElementById('jaundice').value
+    var Rabies   = document.getElementById('Rabies').value
     if (donartype == "" || donartype == "Are You First Time Donar") {
         alert("Fill all details")
     }
@@ -18,7 +19,7 @@ async function validateAndAlertForm() {
     else if (immunizations == "" || immunizations == "Have you received any immunizations in the past month?") {
         alert("Fill all details")
     }
-    else if ( Malaria == "" ||  Malaria  == "Have you been treated for Malaria in the past 3 months?") {
+    else if (Malaria == "" || Malaria == "Have you been treated for Malaria in the past 3 months?") {
         alert("Fill all details")
     }
     else if (recieveblood == "" || recieveblood == "Have you received blood in the past 6 months?") {
@@ -27,47 +28,89 @@ async function validateAndAlertForm() {
     else if (jaundice == "" || jaundice == "Have you had close contact with someone diagnosed with hepatitis or yellow jaundice in the past 6 months?") {
         alert("Fill all details")
     }
+    else if (Rabies == "" || Rabies == "Have you been treated for Rabies or received Hepatitis B immune globulin in the past year?") {
+        alert("Fill all details")
+    }
     else {
-        // document.getElementById('loader').hidden = false
-        fetch(`/validatePerspective?text=${detail}`)
-            .then(response => response.json())
-            .then(async (validated) => {
-                // document.getElementById('loader').hidden = true
-                if (validated.res == true) {
-                    confirmWarningAlert('Attention:  Kindly be informed that all complaints will be forwarded to the respective authority for proper handling. Please refrain from using inappropriate language or submitting frivolous complaints, as actions may be taken against the issuer. Thank you for your understanding and cooperation.        Do you want to raise this complaint ?')
-                    await waitConfirmation()
-                        .then((result) => {
-                            if (result) {
-                                document.getElementById('name').value = name
-                                document.getElementById('email').value = email
-                                document.getElementById('complaint_location_select').value = location
-                                document.getElementById('block_select').value = block
-                                document.getElementById('complaint_type_select').value = type
-                                document.getElementById('complaint_details').value = detail
-                                document.getElementById('form').submit()
-                            }
-                            else {
-                                window.location.reload()
-                            }
-                        })
-                        .catch((err) => {
-                            errorAlert('Some error occured, try again.')
-                        })
-                }
-                else if (validated.res == false) {
-                    window.location = '/errorframe'
-                }
-                else {
-                    const result = validated.res
-                    errorAlert(`We've detected ${result} in your complaint. Please revise it accordingly`)
-                    document.getElementById('name').value = name
-                    document.getElementById('email').value = email
-                    document.getElementById('complaint_location_select').value = location
-                    document.getElementById('block_select').value = block
-                    document.getElementById('complaint_type_select').value = type
-                    document.getElementById('complaint_details').value = detail
-                }
-            })
+        const queryObj = {
+            "donartype": donartype,
+            "medicine": medicine,
+            "lastdonation": lastdonation,
+            "immunizations": immunizations,
+            "Malaria": Malaria,
+            "recieveblood": recieveblood,
+            "Rabies": Rabies,
+            "jaundice": jaundice
+        }
+        fetch(`/donarDetailsSave1?res=${queryObj}`)
+        .then(resp => resp.json())
+        .then((response) => {
+            if (response.stat == true) {
+                window.location.href = "/check3"
+            }
+            else{
+                window.location.href = "/error"
+            }
+        })
     }
 }
 
+async function validateAndAlertForm2() {
+    var Diabetes = document.getElementById('Diabetes').checked
+    var Cancer = document.getElementById('Cancer').checked
+    var Tuberculosis = document.getElementById('Tuberculosis').checked
+    var asthma = document.getElementById('asthma').checked
+    var liver = document.getElementById('liver').checked
+    var kidney = document.getElementById('kidney').checked
+    var clot = document.getElementById('clot').checked
+    var Heart = document.getElementById('Heart').checked
+    var Allergy = document.getElementById('Allergy').checked
+    var queryObj = {
+        "Diabetes": false,
+        "Cancer": false,
+        "Tuberculosis": false,
+        "asthma": false,
+        "liver": false,
+        "kidney": false,
+        "clot": false,
+        "Heart": false,
+        "Allergy": false
+    }
+    if (Diabetes == true) {
+        queryObj.Diabetes = true
+    }
+    else if(Cancer == true){
+        queryObj.Cancer = true
+    }
+    else if(Tuberculosis == true){
+        queryObj.Tuberculosis = true
+    }
+    else if(asthma == true){
+        queryObj.asthma = true
+    }
+    else if(liver == true){
+        queryObj.liver = true
+    }
+    else if(kidney == true){
+        queryObj.kidney = true
+    }
+    else if(clot == true){
+        queryObj.clot = true
+    }
+    else if(Heart == true){
+        queryObj.Heart = true
+    }
+    else if(Allergy == true){
+        queryObj.Allergy = true
+    }
+    fetch(`/donarDetailsSave2?res=${queryObj}`)
+        .then(resp => resp.json())
+        .then((response) => {
+            if (response.stat == true) {
+                window.location.href = "/showDetails"
+            }
+            else{
+                window.location.href = "/error"
+            }
+        })
+}
