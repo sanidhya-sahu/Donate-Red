@@ -18,7 +18,7 @@ const frontPath = path.join(__dirname, '../../', 'frontend', '/')
 router.use(express.static(frontPath));
 
 router.get(`/`,(req, res) => {
-    res.status(200).sendFile(frontPath + 'html/index.html')
+    res.status(200).sendFile(frontPath + 'Html/index.html')
 })
 
 function isLoggedIn(req, res, next) {
