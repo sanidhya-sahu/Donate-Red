@@ -6,20 +6,6 @@ window.addEventListener('load', () => {
                 const city = response.req.city
                 const state = response.req.state
                 document.getElementById('searchedCityName').innerText = city
-                for (let index = 0; index < response.data[city].length; index++) {
-                    const element = response.data[city][index];
-                    fetch(`/findDonorDetails?accID=${element}`)
-                        .then(resp => resp.json())
-                        .then((found) => {
-                            document.getElementById('table1').innerHTML += `
-                                <tr>
-                                    <th>${found.name}</th>
-                                    <th>${found.phone}</th>
-                                    <th>${found.email}</th>
-                                </tr>
-                            `
-                        })
-                }
                 Object.keys(response.data).forEach(key => {
                     if (key != city) {
                         for (let index = 0; index < response.data[key].length; index++) {
@@ -38,7 +24,21 @@ window.addEventListener('load', () => {
                                 })
                         }
                     }
-                });
+                }); 
+                for (let index = 0; index < response.data[city].length; index++) {
+                    const element = response.data[city][index];
+                    fetch(`/findDonorDetails?accID=${element}`)
+                        .then(resp => resp.json())
+                        .then((found) => {
+                            document.getElementById('table1').innerHTML += `
+                                <tr>
+                                    <th>${found.name}</th>
+                                    <th>${found.phone}</th>
+                                    <th>${found.email}</th>
+                                </tr>
+                            `
+                        })
+                }
             }
             else {
                 window.location.href = '/error'

@@ -37,11 +37,11 @@ router.post(`/login`,duallogged, (req, res) => {
                 res.redirect('/')
             }
             else{
-                res.status(401).sendFile(frontPath + 'HTML/error_401.html')
+                res.status(401).sendFile(frontPath + 'HTML/error.html')
             }
         })
         .catch((err) => {
-            res.status(401).sendFile(frontPath + 'HTML/error_401.html')
+            res.status(401).sendFile(frontPath + 'HTML/error.html')
         })
 })
 
@@ -53,7 +53,7 @@ router.post(`/register`,duallogged, (req, res) => {
                 const newUser = new userSchema({
                     name: username,
                     email: req.body.email,
-                    bloodGrp: req.body.bloodGrp,
+                    bloodGrp: String(req.body.bloodGrp).toLowerCase(),
                     age: req.body.age,
                     phone: req.body.phone,
                     city: req.body.city,
@@ -63,11 +63,12 @@ router.post(`/register`,duallogged, (req, res) => {
                 })
                 newUser.save()
                     .then((saved) => {
-                        res.sendFile(frontPath + 'HTML/successRegister.html')
+                        res.sendFile(frontPath + 'HTML/login.html')
                     })
                     .catch(err => {
+                        // console.log(err);
                         if (err.code == 11000) {
-                            res.sendFile(frontPath + 'HTML/error_11000.html')
+                            res.sendFile(frontPath + 'HTML/error.html')
                         }
                         else {
                             res.sendFile(frontPath + 'HTML/error.html')
