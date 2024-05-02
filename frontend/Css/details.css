@@ -198,3 +198,7 @@ form label {
   color: hsl(0, 0%, 47%);
   margin-left: 1%;
 }
+
+.format{
+  text-transform: capitalize;
+}
