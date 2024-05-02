@@ -7,6 +7,7 @@
   <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
   <link rel="stylesheet" href="..\Css\register.css">
     <script src="../js/logCheck.js" defer></script>
+    <script src="../js/stateCity.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -73,14 +74,16 @@
                 />
                 <span>Phone</span>
               </label> 
-            <label>
-              <input placeholder="" type="text" id="city" name="city" class="input" required />
-              <span>City</span>
-            </label>
-            <label>
-              <input  placeholder="" type="text" id="state" name="state" class="input" required />
-              <span>  State</span>
-            </label>
+              <label>
+                <select id="state" name="state" required>
+                  <option value="Select Your State">Select Your State</option>
+                </select>
+              </label>
+              <label>
+                <select id="city" name="city" required>
+                  <option value="Select Your City">Select Your City</option>
+                </select>
+              </label>
                 
             <label>
                 <input name="password" required placeholder="" type="password" class="input">

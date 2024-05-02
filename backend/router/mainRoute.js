@@ -3,6 +3,7 @@ const router = express()
 const path = require('path')
 const userSchema = require('../Models/userSchema')
 const fastHashCode = require('fast-hash-code')
+const citydata = require('./stateCityData.json')
 
 router.use(express.urlencoded())
 
@@ -84,6 +85,9 @@ router.get(`/error`,(req,res)=>{
 })
 router.get(`/blog`,(req,res)=>{
     res.sendFile(frontPath + `html/blogs.html`)
+})
+router.get(`/stateCityData`,(req,res)=>{
+    res.send(citydata)
 })
 
 
